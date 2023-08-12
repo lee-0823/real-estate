@@ -15,38 +15,35 @@ export function StepperSlide() {
       clearTimeout(autoPlayTimer);
     };
   }, [activeStep]);
-
-  // 이 부분을 수정합니다
   return (
     <div
       style={{
-        maxWidth: "800px",
-        flexGrow: 1,
-        position: "relative",
+        right: 0,
+        top: "100px",
+        position: "absolute",
+        height: "750px",
+        width: "400px",
         overflow: "hidden",
       }}
     >
-      {images.map((step, index) => (
-        <div key={step.index}>
-          {activeStep === step.index && (
+      <div
+        style={{
+          display: "flex",
+          transform: `translateX(${-activeStep * 400}px)`,
+          transition: "0.6s ease",
+        }}
+      >
+        {images.map((step, index) => (
+          <div key={step.index}>
             <img
-              style={{
-                height: "255px",
-                display: "block",
-                maxWidth: "400px",
-                overflow: "hidden",
-                width: "100%",
-                position: "absolute",
-                left: "50%",
-                top: "0",
-                transform: "translateX(-50%)",
-              }}
+              width="400px"
+              height="750px"
               src={step.imgPath}
               alt={step.label}
             />
-          )}
-        </div>
-      ))}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 export function HomeMain01() {
   return (
     <div>
-      <video autoPlay muted loop>
+      <video width="100%" autoPlay muted loop>
         <source src="/HomeAdvertising.mp4" type="video/mp4" />
       </video>
     </div>
