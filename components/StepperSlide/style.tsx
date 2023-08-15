@@ -1,12 +1,13 @@
-import styled from "@emotion/styled";
+// import styled from "@emotion/styled";
 
-export const Carousel = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 500px;
-  height: 500px;
-  background-color: green;
+// export const Carousel = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 500px;
+//   height: 500px;
+//   background-color: green;
+
 /* 
   .slider {
     width: 100%;

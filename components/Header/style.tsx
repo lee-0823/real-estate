@@ -1,38 +1,81 @@
+// import { backImage } from "@/constances/BackImage";
+// import { Height } from "@mui/icons-material";
+
 import styled from "@emotion/styled";
-import { Height } from "@mui/icons-material";
 
-export const Navigation = styled.ul<{ open: boolean }>`
-  /* padding-top: 2rem; */
-
-  width: 100%;
+export const HeaderStyle = styled.header<{ open: boolean }>`
   position: fixed;
-  height: ${({ open }) => (open ? "400px" : "50px")};
-
   display: flex;
-  overflow: hidden;
-  list-style-type: none;
-  background-color: transparent;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  background-color: #0c134f;
-  opacity: 50%;
-`;
-export const StyledList = styled.li`
-  width: 150px;
 
-  :hover {
-    background-color: #0c134f;
-    color: lightyellow;
-  }
+  overflow: hidden;
+  width: 100%;
+  height: ${({ open }) => (open ? "200px" : "50px")};
+  opacity: ${({ open }) => (open ? 1 : 0.5)};
+  background-color: ${({ open }) => (open ? "#0c134f" : "none")};
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  /* background-color: #0c134f; */
+
+  font-size: 18px;
+`;
+
+export const BuggerMenu = styled.div`
+  width: 100%;
+  padding-top: 5px;
+  padding-left: 30.5px;
+
+  /* background-color: red; */
+`;
+
+export const Navigation = styled.div`
+  display: flex;
+`;
+
+export const StyledList = styled.div`
+  width: 100%;
+
   div {
-    padding: 10px 0;
-    line-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 50px;
-    font-size: 28px;
+    font-size: 18px;
+
+    /* :hover {
+      color: lightyellow;
+      background-color: white;
+    } */
   }
   ul {
-    padding-top: 24px;
+    width: 100%;
+    height: 150px;
+
+    list-style-type: none;
+    font-size: 14px;
+
+    /* :hover {
+      color: lightyellow;
+      background-color: white;
+    } */
   }
+
   ul li {
-    padding-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    line-height: 35px;
+  }
+`;
+
+export const TelInfo = styled.div`
+  float: right;
+  .div {
+    display: flex;
+    color: whitesmoke;
   }
 `;

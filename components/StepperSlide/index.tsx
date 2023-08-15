@@ -22,21 +22,21 @@ export function StepperSlide() {
         top: "100px",
         position: "absolute",
         height: "750px",
-        width: "400px",
+        width: "700px",
         overflow: "hidden",
       }}
     >
       <div
         style={{
           display: "flex",
-          transform: `translateX(${-activeStep * 400}px)`,
+          transform: `translateX(${-activeStep * 700}px)`,
           transition: "0.6s ease",
         }}
       >
         {images.map((step, index) => (
           <div key={step.index}>
             <img
-              width="400px"
+              width="700px"
               height="750px"
               src={step.imgPath}
               alt={step.label}

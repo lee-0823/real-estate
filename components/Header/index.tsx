@@ -1,7 +1,13 @@
 import Menu from "@mui/icons-material/Menu";
 import Close from "@mui/icons-material/Close";
 import { Grid, IconButton } from "@mui/material";
-import { Navigation, StyledList } from "./style";
+import {
+  HeaderStyle,
+  BuggerMenu,
+  Navigation,
+  StyledList,
+  TelInfo,
+} from "./style";
 import { HEADERLIST } from "@/constances/header";
 import Link from "next/link";
 import { useState } from "react";
@@ -11,31 +17,31 @@ export function Header() {
   const handleOpen = () => {
     setOpen((open) => !open);
   };
-  // const handleAlignment = (event, newAlignment) => {
-  //   setOnMenu(newAlignment);
-  // };
+
   return (
-    <header className="headerStyle">
-      <Grid container className="">
-        <Grid item xs={2} md={2}>
-          <h1>
-            <Link href="/">메가시티</Link>
-          </h1>
+    <HeaderStyle open={open}>
+      <Grid container>
+        <Grid item xs={1.5} md={1.5}>
+          <Link href="/">
+            <img src="/img/LogoImg/logo.png" width={100} height={50} />
+          </Link>
         </Grid>
-        <Grid item xs={1} md={1}>
-          <IconButton
-            className="svg_icons"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-            onClick={handleOpen}
-          >
-            {open ? <Close /> : <Menu />}
-          </IconButton>
+        <Grid item xs={0.5} md={0.5}>
+          <BuggerMenu>
+            <IconButton
+              className="svg_icons"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ mr: 2 }}
+              onClick={handleOpen}
+            >
+              {open ? <Close /> : <Menu />}
+            </IconButton>
+          </BuggerMenu>
         </Grid>
-        <Grid item xs={8} md={8}>
-          <Navigation open={open}>
+        <Grid item xs={8.5} md={8.5}>
+          <Navigation>
             {HEADERLIST.map(({ title, subtitle }, index) => (
               <StyledList key={index}>
                 <div>{title}</div>
@@ -52,13 +58,13 @@ export function Header() {
             ))}
           </Navigation>
         </Grid>
-        <Grid item xs={1} md={1}>
-          <div>
-            <div style={{ color: "whitesmoke" }}>Conenect To</div>
-            <div style={{ color: "whitesmoke" }}>1644-3777</div>
-          </div>
+        <Grid item xs={1.5} md={1.5}>
+          <TelInfo>
+            <div>Conenect To</div>
+            <div>1644-3777</div>
+          </TelInfo>
         </Grid>
       </Grid>
-    </header>
+    </HeaderStyle>
   );
 }
