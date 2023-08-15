@@ -19,7 +19,7 @@ import Link from "next/link";
 
 import { Close } from "@mui/icons-material";
 
-import { HomeStyle } from "./style";
+import { HomeStyle } from "@/pages";
 
 import { Header } from "@/components/Header";
 import { HomeMain01 } from "@/components/HomeMain01";
