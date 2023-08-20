@@ -21,12 +21,12 @@ export function Header() {
   return (
     <HeaderStyle open={open}>
       <Grid container>
-        <Grid item xs={1.5} md={1.5}>
+        <Grid item xs={2} md={3}>
           <Link href="/">
-            <img src="/img/LogoImg/logo.png" width={100} height={50} />
+            <img src="../../img/LogoImg/logo.png" width={100} height={50} />
           </Link>
         </Grid>
-        <Grid item xs={0.5} md={0.5}>
+        <Grid item xs={1} md={2}>
           <BuggerMenu>
             <IconButton
               className="svg_icons"
@@ -40,7 +40,7 @@ export function Header() {
             </IconButton>
           </BuggerMenu>
         </Grid>
-        <Grid item xs={8.5} md={8.5}>
+        <Grid item xs={8} md={8}>
           <Navigation>
             {HEADERLIST.map(({ title, subtitle }, index) => (
               <StyledList key={index}>
@@ -58,9 +58,9 @@ export function Header() {
             ))}
           </Navigation>
         </Grid>
-        <Grid item xs={1.5} md={1.5}>
+        <Grid item xs={1} md={1}>
           <TelInfo>
-            <div>Conenect To</div>
+            <div>박과장</div>
             <div>1644-3777</div>
           </TelInfo>
         </Grid>

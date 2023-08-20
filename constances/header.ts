@@ -26,7 +26,6 @@ export const HEADERLIST = [
   {
     title: "사이버흥보관",
     subtitle: [
-      { label: "e-모델하우스", link: "x" },
       { label: "유닛촬영컷", link: "y" },
       { label: "유닛보기", link: "z" },
       { label: "상품 CG", link: "l" },

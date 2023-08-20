@@ -28,10 +28,14 @@ export const SectionStyle = styled.div<{ visible: boolean }>`
 `;
 
 export const HomeText = styled.div`
+  /* @media (max-width : 394px) {
+ 
+} */
+
   position: relative;
   /* visibility: hidden; */
   color: white;
-  width: 50%;
+  width: 100%;
   top: 25px;
   left: 300px;
   height: 100px;
