@@ -1,6 +1,6 @@
 import { FOOTERCONTENTS } from "@/constances/footerContents";
 import { Grid } from "@mui/material";
-import { FooterStyle, HomeText, Text, StyledList } from "./style";
+import { FooterStyle, StyledList } from "./style";
 import Link from "next/link";
 
 // import { SuppressHydrationWarning } from "react";
@@ -16,7 +16,7 @@ export function Footer() {
           <StyledList>
             <ul>
               <li>
-                <span>시행수탁사</span>"신한자산신탁(주)"
+                <span>시행수탁사</span>신한자산신탁(주)
               </li>
             </ul>
           </StyledList>
@@ -25,7 +25,7 @@ export function Footer() {
           <StyledList>
             <ul>
               <li>
-                <span>시행위탁사</span>"(주)나르샤인"
+                <span>시행위탁사</span>(주)나르샤인
               </li>
             </ul>
           </StyledList>
@@ -34,7 +34,7 @@ export function Footer() {
           <StyledList>
             <ul>
               <li>
-                <span>시행수탁사</span>"태산종합건설(주)"
+                <span>시행수탁사</span>태산종합건설(주)
               </li>
             </ul>
           </StyledList>
