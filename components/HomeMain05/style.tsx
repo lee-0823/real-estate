@@ -10,7 +10,7 @@ export const KakaoMap = styled.div`
   width: 500px;
   height: 400px;
 
-  background-color: gray;
+  background-color: green;
 `;
 
 export const HomeText = styled.div`
