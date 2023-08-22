@@ -4,12 +4,31 @@ export const SectionStyle = styled.div`
   width: 100%;
   height: 1050px;
   /* background-color: #0c134f; */
+`;
+
+export const BackImage = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background-color: red;
+
+  .img {
+    /* background-size: cover;
+
+    vertical-align: top;
+    border: none; */
+
+    /* 상대경로 안먹힘. 
+    background: url(${process.env.PUBLIC_URL}/img/BackImg/HomeMain06BackImg.png)
+      center / cover no-repeat; */
+  }
 `;
 
 // Styles
 export const StyledContactForm = styled.div`
-  width: 400px;
+  position: absolute;
+  width: 100%;
 
   form {
     display: flex;
@@ -32,8 +51,15 @@ export const StyledContactForm = styled.div`
     }
 
     label {
-      margin-top: 1rem;
+      margin-top: 3rem;
     }
+
+    span {
+      font-size: 12px;
+      padding: 3px;
+      color: red;
+    }
+
     input[type="submit"] {
       margin-top: 2rem;
       cursor: pointer;
@@ -41,6 +67,50 @@ export const StyledContactForm = styled.div`
       color: white;
       border: none;
     }
+  }
+`;
+
+// export const ErrorName = styled.div`
+//   font-size: 12px;
+//   padding: 3px;
+//   color: white;
+//   display: none;
+// `;
+
+// export const ErrorPhone = styled.div`
+//   font-size: 12px;
+//   padding: 3px;
+//   color: white;
+//   display: none;
+// `;
+
+export const FormCheckBox = styled.div`
+  position: left;
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  background-color: green;
+
+  input {
+  }
+
+  label {
+    position: relative;
+    width: 100%;
+    height: 35px;
+
+    padding: 0, 50px;
+
+    /* outline: none;
+    border-radius: 5px;
+    border: 1px solid rgb(220, 220, 220); */
+  }
+`;
+export const CheckList = styled.div`
+  ul li {
+    list-style: none;
   }
 `;
 
