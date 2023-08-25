@@ -18,18 +18,9 @@ export interface FOOTERCONTENTS {
 }
 
 export const FOOTERCONTENTS = {
-  footerContent1: {
-    filed: "시행수탁사",
-    subFiled: "신한자산신탁(주)",
-  },
-  footerContent2: {
-    filed: "시행위탁사",
-    subFiled: "(주)나르샤인",
-  },
-  footerContent3: {
-    filed: "시공사",
-    subFiled: "태산종합건설(주)",
-  },
+  footerContent1: [{ filed: "시행수탁사" }, { subFiled: "신한자산신탁(주)" }],
+  footerContent2: [{ filed: "시행위탁사" }, { subFiled: "(주)나르샤인" }],
+  footerContent3: [{ filed: "시공사" }, { subFiled: "태산종합건설(주)" }],
   footerContent4: [
     { icon: "아이콘" },
     {
@@ -46,4 +37,5 @@ export const FOOTERCONTENTS = {
     { licontent: "Copyrightⓒ2022 MEGACITY . All Right Reserved." },
     { licontent: "Creative & Marketing by YOURBIZ", link: "x" },
   ],
+  footerContent5: [{ icon: "아이콘" }],
 };
