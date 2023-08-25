@@ -1,73 +1,85 @@
 import styled from "@emotion/styled";
 
 export const FooterStyle = styled.footer`
-  /* position: fixed; */
-  /* display: flex; */
-  background-color: #0c134f;
-
   width: 100%;
-  height: 300px;
+  height: 400px;
 
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  /* background-color: #0c134f; */
-
-  font-size: 18px;
+  font-family: Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  /* background-color: orange; */
 `;
 
-export const BuggerMenu = styled.div`
+export const FooterList = styled.div`
   width: 100%;
-  padding-top: 5px;
-  padding-left: 30.5px;
-
-  /* background-color: red; */
-`;
-
-export const Navigation = styled.div`
-  display: flex;
-`;
-
-export const StyledList = styled.div`
-  width: 100%;
-
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    font-size: 18px;
-
-    /* :hover {
-      color: lightyellow;
-      background-color: white;
-    } */
-  }
   ul {
     width: 100%;
-    height: 150px;
-
-    list-style-type: none;
-    font-size: 14px;
-
-    /* :hover {
-      color: lightyellow;
-      background-color: white;
-    } */
+    border-bottom: solid 1px #ffffff26;
   }
 
   ul li {
+    width: 100%;
+    height: 100px;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
-    width: 100%;
-    line-height: 35px;
+    font-size: 16px;
+    /* background-color: pink; */
+  }
+
+  ul li span {
+    padding: 50px 20px;
+    font-size: 18px;
   }
 `;
 
-export const TelInfo = styled.div`
-  float: right;
-  .div {
-    display: flex;
-    color: whitesmoke;
+export const FooterImg = styled.div`
+  width: 100%;
+  height: 300px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-bottom: 45px;
+
+  img {
+    width: 200px;
+    height: 50px;
+
+    /* background-color: red; */
   }
+`;
+
+export const FooterContent = styled.div`
+  width: 100%;
+  height: 250px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 50px;
+  font-size: 12px;
+  /* background-color: green; */
+
+  div {
+    line-height: 30px;
+  }
+
+  a: link {
+    /* text-decoration: underline; */
+    /* font-weight: bold; */
+    font-size: 14px;
+    font-weight: bold;
+  }
+`;
+
+export const FooterButton = styled.div`
+  width: 100%;
+  height: 250px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
