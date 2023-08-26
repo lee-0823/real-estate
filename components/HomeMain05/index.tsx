@@ -12,7 +12,7 @@ export function HomeMain05() {
   useEffect(() => {
     const kakaoMapScript = document.createElement("script");
     kakaoMapScript.async = false;
-    kakaoMapScript.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=b5c3db2ce9e3597ec7e7151541a0d5b9`;
+    kakaoMapScript.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=b5c3db2ce9e3597ec7e7151541a0d5b9&autoload=false`;
     document.head.appendChild(kakaoMapScript);
 
     const onLoadKakaoAPI = () => {
