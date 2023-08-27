@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { images } from "@/constances/images";
+import { useState, useEffect } from 'react';
+import { images } from '@/constances/images';
 // Box import를 제거합니다
 
 export function StepperSlide() {
@@ -19,26 +19,26 @@ export function StepperSlide() {
     <div
       style={{
         right: 0,
-        top: "100px",
-        position: "absolute",
-        height: "750px",
-        width: "700px",
-        overflow: "hidden",
+        top: '100px',
+        position: 'absolute',
+        height: '750px',
+        width: '700px',
+        overflow: 'hidden',
       }}
     >
       <div
         style={{
-          display: "flex",
+          display: 'flex',
           transform: `translateX(${-activeStep * 700}px)`,
-          transition: "0.6s ease",
+          transition: '0.6s ease',
         }}
       >
         {images.map((step, index) => (
           <div key={step.index}>
             <img
-              width="700px"
-              height="750px"
-              src={step.imgPath}
+              width='700px'
+              height='750px'
+              src={process.env.BACKEND_URL + step.imgPath}
               alt={step.label}
             />
           </div>
