@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Grid } from '@mui/material';
 import {
   SectionStyle,
   GrayBox,
@@ -7,7 +7,7 @@ import {
   Text,
   BackImageDiv,
   BackImage,
-} from "./style";
+} from './style';
 
 export function HomeMain04() {
   return (
@@ -17,19 +17,19 @@ export function HomeMain04() {
         <Grid item xs={4} md={4}>
           <HomeText>
             <TextBox>
-              <Text fontSize={18} color="white" margin="0">
+              <Text fontSize={18} color='white' margin='0'>
                 MEGACITY
               </Text>
               <br></br>
-              <Text fontSize={42} color="white" margin="0">
+              <Text fontSize={42} color='white' margin='0'>
                 디테일의 차이가
               </Text>
               <br></br>
-              <Text fontSize={42} color="white" margin="0">
+              <Text fontSize={42} color='white' margin='0'>
                 프리미엄의 차이
               </Text>
               <br></br>
-              <Text fontSize={24} color="white" margin="0">
+              <Text fontSize={24} color='white' margin='0'>
                 메가시티에는 고객감동을 위한 디테일이 있습니다.
               </Text>
               <br></br>
@@ -40,7 +40,9 @@ export function HomeMain04() {
           <BackImageDiv>
             <BackImage>
               <img
-                src={"/img/HomeMain04/HomeMain04Img.png"}
+                src={
+                  process.env.BACKEND_URL + '/img/HomeMain04/HomeMain04Img.png'
+                }
                 width={1400}
                 height={850}
               />

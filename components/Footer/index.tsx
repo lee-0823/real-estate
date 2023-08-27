@@ -1,13 +1,13 @@
-import { FOOTERCONTENTS } from "@/constances/footerContents";
-import { Grid, Button } from "@mui/material";
+import { FOOTERCONTENTS } from '@/constances/footerContents';
+import { Grid, Button } from '@mui/material';
 import {
   FooterStyle,
   FooterList,
   FooterImg,
   FooterContent,
   FooterButton,
-} from "./style";
-import Link from "next/link";
+} from './style';
+import Link from 'next/link';
 
 // import { SuppressHydrationWarning } from "react";
 
@@ -54,7 +54,9 @@ export function Footer() {
       <Grid container>
         <Grid item xs={3} md={3}>
           <FooterImg>
-            <img src="/img/FooterLogo/FooterLogo.png" />
+            <img
+              src={process.env.BACKEND_URL + '/img/FooterLogo/FooterLogo.png'}
+            />
           </FooterImg>
         </Grid>
         <Grid item xs={7} md={7}>
@@ -80,14 +82,14 @@ export function Footer() {
               </div>
               <div>Copyrightⓒ2022 MEGACITY . All Right Reserved.</div>
               <div>
-                Creative & Marketing by <Link href="/">YOURBIZ</Link>
+                Creative & Marketing by <Link href='/'>YOURBIZ</Link>
               </div>
             </div>
           </FooterContent>
         </Grid>
         <Grid item xs={2} md={2}>
           <FooterButton>
-            <Button variant="outlined" color="warning" href="/">
+            <Button variant='outlined' color='warning' href='/'>
               TOP
             </Button>
           </FooterButton>

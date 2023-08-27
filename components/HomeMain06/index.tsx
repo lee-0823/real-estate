@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
-import Link from "next/link";
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import Link from 'next/link';
 //email라이브러리
 import {
   SectionStyle,
@@ -8,11 +8,11 @@ import {
   StyledContactForm,
   FormCheckBox,
   CheckList,
-} from "./style";
+} from './style';
 export function HomeMain06() {
   const form = React.useRef(null);
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
 
   const [checked, setChecked] = useState(true);
   // const [required, setRequired] = useState(false);
@@ -24,44 +24,44 @@ export function HomeMain06() {
     e.preventDefault();
     if (!name) {
       setErrorName(true);
-      console.log("name1", name);
-      console.log("errorName1", errorName);
+      console.log('name1', name);
+      console.log('errorName1', errorName);
       return;
     } else {
       setErrorName(false);
-      console.log("name2", name);
-      console.log("errorName2", errorName);
+      console.log('name2', name);
+      console.log('errorName2', errorName);
     }
     if (!phone) {
       setErrorPhone(true);
-      console.log("phone", phone);
-      console.log("errorPhone1", errorName);
+      console.log('phone', phone);
+      console.log('errorPhone1', errorName);
       return;
     } else {
       setErrorPhone(false);
-      console.log("phone2", phone);
-      console.log("errorPhone2", errorName);
+      console.log('phone2', phone);
+      console.log('errorPhone2', errorName);
     }
     if (!checked) {
-      alert("개인정보 취급에 동의해주세요!");
+      alert('개인정보 취급에 동의해주세요!');
       return;
     }
     emailjs
       .sendForm(
         //zerostorm3@gmail.com
-        "service_66yooy9", //"YOUR_SERVICE_ID"
-        "template_1p7sg5f", //"YOUR_TEMPLATE_ID"
+        'service_66yooy9', //"YOUR_SERVICE_ID"
+        'template_1p7sg5f', //"YOUR_TEMPLATE_ID"
         e.currentTarget,
-        "M9TQmuGUq3rdTGUP9" // "YOUR_USER_ID" // Account Public Key
+        'M9TQmuGUq3rdTGUP9' // "YOUR_USER_ID" // Account Public Key
       )
       .then(
         (result) => {
           console.log(result.text);
-          alert("메세지가 전송되었습니다!");
+          alert('메세지가 전송되었습니다!');
         },
         (error) => {
           console.log(error.text);
-          alert("오류가 발생했습니다. 다시시도해주세요.");
+          alert('오류가 발생했습니다. 다시시도해주세요.');
         }
       );
   };
@@ -92,7 +92,7 @@ export function HomeMain06() {
     <SectionStyle>
       <BackImage>
         <img
-          src={"/img/BackImg/HomeMain06BackImg.png"}
+          src={process.env.BACKEND_URL + '/img/BackImg/HomeMain06BackImg.png'}
           width={1800}
           height={1050}
         />
@@ -102,46 +102,46 @@ export function HomeMain06() {
             <span>관심고객등록</span>
             <label>이름</label>
             <input
-              type="text"
-              name="user_name"
+              type='text'
+              name='user_name'
               value={name}
               onChange={handleNameInput}
               required
             />
-            <span style={{ display: errorName ? "block" : "none" }}>
+            <span style={{ display: errorName ? 'block' : 'none' }}>
               이름은 필수항목입니다. 입력해주세요
             </span>
             <label>연락처 </label>
             <input
-              type="tel"
-              name="user_phone"
+              type='tel'
+              name='user_phone'
               maxLength={11}
               value={phone}
               onChange={handlePhoneInput}
-              pattern="[0-9]{11}"
+              pattern='[0-9]{11}'
               required
             />
-            <span style={{ display: errorPhone ? "block" : "none" }}>
+            <span style={{ display: errorPhone ? 'block' : 'none' }}>
               연락처는 필수항목입니다. 입력해주세요
             </span>
             <label>Email</label>
-            <input type="email" name="user_email" />
+            <input type='email' name='user_email' />
             <label>Message</label>
-            <input type="text" name="message" />
+            <input type='text' name='message' />
             <div>
-              <input type="submit" value="Send" />
+              <input type='submit' value='Send' />
             </div>
             <FormCheckBox>
               <input
-                type="checkbox"
-                id="rgs"
-                name=""
-                value="20"
+                type='checkbox'
+                id='rgs'
+                name=''
+                value='20'
                 checked={checked}
                 onChange={handleCheckboxChange}
               ></input>
               <label>
-                <Link href="/">개인정보 취급방침</Link>에 동의합니다.
+                <Link href='/'>개인정보 취급방침</Link>에 동의합니다.
               </label>
             </FormCheckBox>
             <CheckList>
